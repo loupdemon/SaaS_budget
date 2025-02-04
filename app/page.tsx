@@ -1,6 +1,6 @@
-import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
     return (
@@ -9,7 +9,7 @@ export default function Home() {
                 {/* mettre les flexible, centrer vertifcalement et horizontalement, pour que les élement soit en une colonne */}
                 <div>
                     {/* on rajoute un userbutton   */}
-                    <UserButton />
+                    <Navbar />
                     <div className="flex flex-col">
                         <h1 className="text-4xl md:text-5xl font-bold text-center">
                             {/* on veut un text centrer et frand et bold , ui se rétrécit quand on fait petit ecran */}
