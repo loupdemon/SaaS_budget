@@ -1,11 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
+import { checkAndAddUser } from "../actions";
 
 const Navbar = () => {
     const { isLoaded, isSignedIn, user } = useUser();
+
+    useEffect(()=>{
+        //manière de reccuperer l'adressre utilisateur avec clerk
+        if(user?.primaryEmailAddress?.emailAddress){
+            checkAndAddUser(user?.primaryEmailAddress?.emailAddress)
+        }
+    },[])
     return (
         <div className="bg-base-200/30 px-5 md:px-[10%] py-4">
             {isLoaded &&
@@ -16,7 +24,7 @@ const Navbar = () => {
                                 D<span className="text-accent">.pense</span>
                             </div>
                             <div className="md:flex hidden">
-                                <Link href={""} className="btn">
+                                <Link href={"/budgets"} className="btn">
                                 Mes Budgets 
                                 </Link>
                                 <Link href={""} className="btn">
@@ -30,8 +38,8 @@ const Navbar = () => {
                         </div>
 
 
-                        <div className="md:flex flex mt-2 justify-center">
-                            <Link href={""} className="btn btn-sm">
+                        <div className="md:hidden flex mt-2 justify-center">
+                            <Link href={"/budgets"} className="btn btn-sm">
                             Mes Budgets 
                             </Link>
                             <Link href={""} className="btn mx-4 btn-sm">

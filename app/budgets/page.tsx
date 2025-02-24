@@ -1,12 +1,13 @@
 "use client"
 import React, { useEffect } from 'react'
-import { testconsolelog } from '../actions'
-
+import Wrapper from '../components/Wrapper'
 
 const page = () => {
 
  return (
-    <div>page</div>
+      <Wrapper>
+         text
+      </Wrapper>
   )
 }
 
