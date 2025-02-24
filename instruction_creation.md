@@ -1,4 +1,4 @@
-## install drewui 
+## install daisyui pour le smodal et login et signup
 ## install shadcn
 ## Install tailwind
 
@@ -27,7 +27,14 @@ npx prisma studio
 
 ça commencera fichier avec "use server" qui veut dire que els actions seront exécutées sur le serveur et non pas chez le client 
 
-Pouquoi in fait ça, car les traitement vont se faire en accèdant à la base de donénes, et on ne veut pas que le client puisse accèder à la BDD.
+Pouquoi On fait ça, car les traitement vont se faire en accèdant à la base de donénes, et on ne veut pas que le client puisse accèder à la BDD.
+
+
+### developper page budget avec wrapper 
+### ajout fonctionalité d'ajout budget
+
+## installer emojipicker react 
+npm install emoji-picker-react
 
 
 
