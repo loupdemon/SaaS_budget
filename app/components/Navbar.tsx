@@ -13,7 +13,7 @@ const Navbar = () => {
                     <>
                         <div className="flex justify-between items-center">
                             <div className="flex text-2xl items-center font-bold">
-                                Ton<span className="text-accent">.Budget</span>
+                                D<span className="text-accent">.pense</span>
                             </div>
                             <div className="md:flex hidden">
                                 <Link href={""} className="btn">
@@ -28,9 +28,35 @@ const Navbar = () => {
                             </div>
                             <UserButton/>
                         </div>
+
+
+                        <div className="md:flex flex mt-2 justify-center">
+                            <Link href={""} className="btn btn-sm">
+                            Mes Budgets 
+                            </Link>
+                            <Link href={""} className="btn mx-4 btn-sm">
+                            Tableau de boar 
+                            </Link>
+                            <Link href={""} className="btn btn-sm">
+                            Mes transactions 
+                            </Link>
+                        </div>
+
                     </>
                 ) : (
-                    <div>je</div>
+                    <div className="flex items-center justify-between">
+                         <div className="flex text-2xl items-center font-bold">
+                                D<span className="text-accent">.pense</span>
+                        </div>
+                            <div className="flex mt-2 justify-center">
+                            <Link href={"/sign-in"} className="btn btn-sm">
+                            Se connecter
+                            </Link>
+                            <Link href={"/sign-up"} className="btn mx-4 btn-sm btn-accent">
+                            S'inscrire 
+                            </Link>
+                        </div>
+                    </div>
                 ))}
         </div>
     );
