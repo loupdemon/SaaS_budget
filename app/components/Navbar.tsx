@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useUser } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -12,12 +12,21 @@ const Navbar = () => {
                 (isSignedIn ? (
                     <>
                         <div className="flex justify-between items-center">
-                            <div className="flex text-2x1 item-center font-bold">
+                            <div className="flex text-2xl items-center font-bold">
                                 Ton<span className="text-accent">.Budget</span>
                             </div>
-                            <div className="flex">
-                                <Link href={""}>Mes dépenses </Link>
+                            <div className="md:flex hidden">
+                                <Link href={""} className="btn">
+                                Mes Budgets 
+                                </Link>
+                                <Link href={""} className="btn">
+                                Tableau de boar 
+                                </Link>
+                                <Link href={""} className="btn">
+                                Mes transactions 
+                                </Link>
                             </div>
+                            <UserButton/>
                         </div>
                     </>
                 ) : (
